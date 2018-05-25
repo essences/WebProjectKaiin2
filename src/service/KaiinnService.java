@@ -54,6 +54,8 @@ public class KaiinnService
 			//会員登録
 			kmgr.put( k );
 			//登録結果(会員リスト)を取得し、beanにセット
+			
+			//林コメント　5/25 ２つのSQL発行に２つのコネクションがつかわれているので、１つに統一してください。
 			bean.setList( listout() );
 			return bean;
 		} catch (ClassNotFoundException | SQLException e)
